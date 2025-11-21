@@ -39,14 +39,14 @@ with st.sidebar:
     st.title("About the Engineer")
     st.markdown("""
     **Name:** Ivan Gopei
-    \n**Role:** Full Stack AI Engineer
+    \n**Role:** AI Engineer
     \n**Stack:** TensorFlow, Python, Streamlit
     """)
     st.divider()
     st.info("Draw a digit (0-9). The AI uses a CNN with Data Augmentation to recognize rotated or messy inputs.")
 
 # --- MAIN UI ---
-st.title("🧠 AI Neural Network Recognizer")
+st.title("AI Digit Recognizer")
 st.markdown("<p style='text-align: center; color: #888;'>Handwritten Digit Classification System v2.0</p>", unsafe_allow_html=True)
 
 if model is None:
@@ -138,3 +138,4 @@ with col3:
             
         else:
             st.info("Waiting for input...")
+
