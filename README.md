@@ -1,4 +1,4 @@
-# ai-handwriting-recognizer
+# AI Handwriting Recognizer
 
 A real-time computer vision application that recognizes handwritten digits (0-9) using a Convolutional Neural Network (CNN). The model is trained on the MNIST dataset and deployed via Streamlit Cloud.
 
