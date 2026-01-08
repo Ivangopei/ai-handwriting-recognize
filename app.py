@@ -24,7 +24,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# --- MODEL LOADING ---
+# LOADING AI BRAIN ("MODEL" VARIABLE CONTAINS THE AI BRAIN)
 @st.cache_resource
 def load_model():
     try:
@@ -139,6 +139,7 @@ with col3:
             
         else:
             st.info("Waiting for input...")
+
 
 
 
