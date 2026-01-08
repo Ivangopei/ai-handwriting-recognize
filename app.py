@@ -7,10 +7,10 @@ import pandas as pd
 
 # --- PAGE CONFIGURATION ---
 st.set_page_config(
-    page_title="Neural Digit Recognizer",
-    page_icon="🧠",
-    layout="wide",
-    initial_sidebar_state="expanded"
+    page_title = "Neural Digit Recognizer",
+    page_icon = "🧠",
+    layout = "wide",
+    initial_sidebar_state = "expanded"
 )
 
 # --- CUSTOM CSS ---
@@ -60,15 +60,15 @@ with col2:
     st.caption("Draw a number (0-9) here:")
     
     canvas_result = st_canvas(
-        fill_color="rgba(255, 165, 0, 0.3)",
-        stroke_width=18,
-        stroke_color="#FFFFFF",
-        background_color="#000000",
-        height=300,
-        width=300,
-        drawing_mode="freedraw",
-        key="canvas",
-        display_toolbar=True
+        fill_color = "rgba(255, 165, 0, 0.3)",
+        stroke_width = 18,
+        stroke_color = "#FFFFFF",
+        background_color = "#000000",
+        height = 300,
+        width = 300,
+        drawing_mode = "freedraw",
+        key = "canvas",
+        display_toolbar = True
     )
 
 with col3:
@@ -138,4 +138,5 @@ with col3:
             
         else:
             st.info("Waiting for input...")
+
 
