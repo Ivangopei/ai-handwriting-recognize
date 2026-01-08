@@ -8,13 +8,13 @@ import pandas as pd
 
 # BROWSER TAB SETTINGS
 st.set_page_config(
-    page_title = "Neural Digit Recognizer",
+    page_title = "AI Digit Recognizer",
     page_icon = "🧠",
     layout = "wide",
     initial_sidebar_state = "expanded"
 )
 
-# --- CUSTOM CSS ---
+# WEB DESIGN CODE (CSS USED)
 st.markdown("""
     <style>
         .block-container {padding-top: 1rem; padding-bottom: 0rem;}
@@ -139,6 +139,7 @@ with col3:
             
         else:
             st.info("Waiting for input...")
+
 
 
 
