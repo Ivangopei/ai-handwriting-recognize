@@ -6,7 +6,7 @@ from streamlit_drawable_canvas import st_canvas
 import pandas as pd
 import os
 
-# --- PAGE CONFIGURATION ---
+# PAGE CONFIGURATION
 st.set_page_config(
     page_title="AI Digit Recognizer",
     page_icon="🧠",
@@ -14,7 +14,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# --- CUSTOM UI STYLING ---
+# CUSTOM UI
 # Manual CSS to clean up Streamlit's default spacing and center headers
 st.markdown("""
     <style>
@@ -25,7 +25,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# --- MODEL UTILITIES ---
+# MODEL UTILITIES
 @st.cache_resource
 def load_digit_model():
     """
@@ -45,7 +45,7 @@ def load_digit_model():
 # Attempt to load the model early to catch setup issues
 digit_classifier = load_digit_model()
 
-# --- SIDEBAR: AUTHOR & INFO ---
+# SIDEBAR: AUTHOR & INFO
 with st.sidebar:
     st.image("https://cdn-icons-png.flaticon.com/512/4712/4712027.png", width=70)
     st.title("About the Engineer")
@@ -60,7 +60,7 @@ with st.sidebar:
     The input is automatically centered and normalized before inference.
     """)
 
-# --- MAIN INTERFACE ---
+# MAIN INTERFACE
 st.title("Handwritten Digit Recognizer")
 st.markdown("<p style='text-align: center; color: #999;'>Real-time inference using a 2D CNN</p>", unsafe_allow_html=True)
 
@@ -97,7 +97,7 @@ with right_col:
         gray_image = Image.fromarray(raw_pixels).convert('L')
         pixel_array = np.array(gray_image)
         
-        # --- PIPELINE: BOUNDING BOX & ASPECT RATIO ---
+        # PIPELINE: BOUNDING BOX & ASPECT RATIO
         # Find exactly where the drawing is to avoid center-bias errors
         rows = np.any(pixel_array, axis=1)
         cols = np.any(pixel_array, axis=0)
@@ -124,7 +124,7 @@ with right_col:
             y_offset = (28 - new_dim[1]) // 2
             mnist_frame.paste(rescaled_digit, (x_offset, y_offset))
             
-            # --- INFERENCE ---
+            # INFERENCE
             # Normalize pixel values to [0, 1]
             input_tensor = np.array(mnist_frame) / 255.0
             input_batch = input_tensor.reshape(1, 28, 28, 1)
@@ -144,3 +144,4 @@ with right_col:
             
     else:
         st.info("Start drawing to see real-time predictions.")
+
