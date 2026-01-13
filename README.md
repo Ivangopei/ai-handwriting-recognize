@@ -35,4 +35,4 @@ For people reading this, I want to give a fun challenge - confuse this AI by dra
 
 
 If you did everything correctly you should see this interface:
-
+<img width="1778" height="785" alt="image" src="https://github.com/user-attachments/assets/f8c41c65-eb85-4d15-8cc5-1f9a64ceaba7" />
