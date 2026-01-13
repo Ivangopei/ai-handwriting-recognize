@@ -31,7 +31,7 @@ For people reading this, I want to give a fun challenge - confuse this AI by dra
 2. Install dependencies:
    pip install -r requirements.txt
 3. Run the app:
-   python -m streamlit run app.py
+   streamlit run app.py
 
 
 If you did everything correctly you should see this interface:
